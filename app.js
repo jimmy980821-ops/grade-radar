@@ -235,6 +235,7 @@ $("#importFile").addEventListener("change", async (event) => {
 $("#openSubjectModal").addEventListener("click", openSubjectModal);
 $("#addSubjectCard").addEventListener("click", openSubjectModal);
 document.querySelectorAll(".nav-button").forEach((button) => button.addEventListener("click", () => document.getElementById(button.dataset.scroll).scrollIntoView({ behavior: "smooth" })));
+document.querySelectorAll(".modal-close").forEach((button) => button.addEventListener("click", () => button.closest("dialog").close()));
 document.querySelectorAll("dialog").forEach((dialog) => dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); }));
 
 render();
